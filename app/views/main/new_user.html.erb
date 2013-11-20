@@ -1,0 +1,17 @@
+<%= form_tag "/new_user" do %>
+<div class = "container">
+
+<% if @message != nil %>
+  <p><%= @message %><p>
+<% end %><br>
+<h1>Register new user</h1>
+<%= label_tag "Username" %><br>
+<%= text_field_tag "username" %><br>
+<%= label_tag "Password" %><br>
+<%= text_field_tag "password" %><br>
+<%= label_tag "Password Confirmation" %><br>
+<%= text_field_tag "password_confirmation" %><br><br>
+<%= submit_tag "Register User" %>
+</div>
+
+<% end %>

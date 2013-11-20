@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>App</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <title>#1 Source for Coworking Locations</title>
+</head>
+<body>
+<div class="container">
+    <div class="top-bar">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="top-bar-logo"><a href="/"><%= image_tag "newlogo.gif" %></a></div>
+           <p>#1 Coworking Resource Online</p>
+
+        <% if @user == nil %>
+        <a href="/login"><%= "Click Here to Login" %></a>
+        <% else %>
+
+        <%= "Welcome " %><%= @user.username %><br>
+        <a href="/logout"><%= "Logout" %></a><br><br>
+        <a href="/new_cowork"><%= "Click Here to Add Listing" %></a>
+        <% end %>
+
+        <% if flash[:error] != nil %>
+          <div class="alert alert-danger">
+            <%= flash[:error] %>
+          </div>
+          <% end %>
+        </div>
+      </div>    
+           <h3><u>Just because you work <i>for yourself</i> doesn't mean you have to work <i>by yourself</u></i></h3>
+    </div>
+  </div>
+<br>
+<%= form_tag request.path_info %>
+<%= yield %>
+<div class="footer">
+  <div class="container">
+   <a href="http://placeholder.com/"><h5>&copy; 2013 Sugar Mountain Software LLC</h5>
+     </div>
+ </div>
+
+</body>
+</html>

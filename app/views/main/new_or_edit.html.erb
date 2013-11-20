@@ -1,0 +1,57 @@
+<%= form_tag "/new_or_edit/:name" do
+<%= error_messages_for @listing %>
+
+<div class="container">
+
+    <div class="row">
+
+	<h2>Edit or Add New Cowork Site</h2>
+	<table>
+		
+	<tr>
+	<td><%= label_tag "name" %></td>
+	<td><%= text_field_tag "name", @listing.name %></td>
+	</tr>
+	<tr>
+	<td><%= label_tag "address" %></td>
+	<td><%= text_field_tag "address", @listing.address %></td>
+	</tr>
+	<tr>
+	<td><%= label_tag "city" %></td>
+	<td><%= text_field_tag "city", @listing.city %></td>
+	</tr>
+	<tr>
+	<td><%= label_tag "state" %></td>
+	<td><%= text_field_tag "state", @listing.state %></td>
+	</tr>
+	<tr>
+	<td><%= label_tag "zip_code" %></td>
+	<td><%= text_field_tag "zip", @listing.zip %></td>
+	</tr>
+	<tr>
+	<td><%= label_tag "phone_number" %></td>
+	<td><%= text_field_tag "phone", @listing.phone %></td>
+	</tr>
+	<tr>
+	<td><%= label_tag "email_address" %></td>
+	<td><%= text_field_tag "email", @listing.email %></td>
+	</tr>
+	<tr>
+	<td><%= label_tag "short_description" %></td>
+	<td><%= text_area_tag "short_desc", @listing.short_desc, cols: 40 %></td>
+	</tr>
+	<tr>
+	<td><%= label_tag "full_description" %></td>
+	<td><%= text_area_tag "long_desc", @listing.long_desc, rows: 6, cols: 70 %></td>
+	</tr>
+	<tr>
+	<td>
+		<%= submit_tag "Submit", class: "button" %>
+	</td>
+	</tr>
+
+</table>
+ </div>
+</div>
+
+<% end %>

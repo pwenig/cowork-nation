@@ -1,0 +1,20 @@
+<html>
+<div class="container">
+	<div class="row">
+    	<div class="col-sm-3">
+			<td><b><%= @listing.name %></hb></td><br>
+    		<td><b><%= @listing.address %></hb></td><br>
+    		<td><b><%= @listing.city %>, <%= @listing.state %> <%= @listing.zip %></b></td><br>
+        </div>
+        <div class="col-sm-3">
+    	<td><p><%= @listing.long_desc %></p></td><br>
+        </div>
+        <td><%= image_tag @listing.image %> height="100" width="175"</td>
+        <% if @user != nil %>
+        <a href="/new_or_edit/<%= @listing.name %>"><%= "(Edit Listing)" %></a><br>
+        <% else %>
+        <% end %>
+	</div>
+</div>
+
+</html>	

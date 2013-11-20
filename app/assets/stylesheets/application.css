@@ -1,0 +1,64 @@
+/*
+*= require_self
+*=require_tree .
+*/
+
+body {
+  font-family: sans-serif;
+  background-size: cover;
+}
+
+.top-bar {
+ padding: 10px;
+ color: white;
+ background-image: ("/images/background-red-brick.jpg");
+ font-weight: bold;
+ padding: 20px 50px 20px 20px;
+}
+
+.top-bar-logo {
+ font-size: 50pt;
+ font-family: fantasy;
+ font-weight: bold;
+ padding: 0 0 0 0 
+ margin: 0 0 0 0 
+ }
+
+ .top-bar-middle {
+  padding: 50px 0px 0px 0px;
+ }
+ 
+ .button {
+  background-color: "aqua";
+ }
+
+  .footer {
+   background-color: #F2F2F2;
+   padding: 20px 20px 20px 20px;
+}
+
+li {font-size: 17pt;
+
+}
+
+ h4{
+ 	font-size: 12pt;
+ 	color: white;
+}
+ 
+ 
+ h5{
+  font-size: 9pt;
+}
+
+h3 {
+  font-size: 16pt;
+  text-align: center;
+  
+ }
+ 
+h2 {
+  font-size: 20pt;
+  margin: 30px 0px 30px 0px;
+}
+

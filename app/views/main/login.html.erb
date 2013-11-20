@@ -1,0 +1,29 @@
+<%= form_tag "/login" do %>
+<html>
+  <div class="container">
+    <% if @message != nil %>
+    <h2><%= @message %></h2>
+    <% end %>
+
+  <h2>Login</h2>
+
+  <p>
+    Username
+    <br>
+    <%= text_field_tag "username", "" %>
+    <br>
+
+    Password
+    <br>
+    <%= password_field_tag "password", "" %>
+    <br>
+
+    <%= submit_tag "Login" %>
+  </p>
+
+  <p>
+  <a href="/new_user">Need to create an account?</a>
+  </p>
+</div>
+</html>
+<% end %>
