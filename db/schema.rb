@@ -16,12 +16,6 @@ ActiveRecord::Schema.define(version: 20131119181233) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cars", force: true do |t|
-    t.string  "color"
-    t.string  "model"
-    t.integer "member_id"
-  end
-
   create_table "cowork_sites", force: true do |t|
     t.string  "image"
     t.string  "name"
@@ -35,12 +29,9 @@ ActiveRecord::Schema.define(version: 20131119181233) do
     t.string  "email"
   end
 
-  create_table "members", force: true do |t|
+  create_table "users", force: true do |t|
     t.string "username"
     t.string "password_digest"
-  end
-
-  create_table "users", force: true do |t|
   end
 
 end

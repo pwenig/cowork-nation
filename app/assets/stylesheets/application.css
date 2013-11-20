@@ -11,7 +11,7 @@ body {
 .top-bar {
  padding: 10px;
  color: white;
- background-image: ("/images/background-red-brick.jpg");
+ background-image:url("/assets/background-red-brick.jpg");
  font-weight: bold;
  padding: 20px 50px 20px 20px;
 }
