@@ -11,19 +11,22 @@
 <div class="container">
     <div class="top-bar">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-12">
+          <h3><u>Just because you work <i>for yourself</i> doesn't mean you have to work <i>by yourself</u></i></h3>
           <div class="top-bar-logo"><a href="/"><%= image_tag "newlogo.gif" %></a></div>
-           <p>#1 Coworking Resource Online</p>
+            <div class= "row">
+              <div class="col-md-12 col-md-offset-8">
+            <%= text_field_tag "search", "City, State", size: 20 %><%= submit_tag "Search" %></div>
+            </div>
 
         <% if @user == nil %>
-        <a href="/login"><%= "Click Here to Login" %></a>
+        <a href="/login"><button type="button" class="btn btn-success">Login</button></a>
         <% else %>
 
         <%= "Welcome " %><%= @user.username %><br>
-        <a href="/logout"><%= "Logout" %></a><br><br>
-        <a href="/new_cowork"><%= "Click Here to Add Listing" %></a>
+        <a href="/logout"><button type="button" class="btn btn-success">Logout</button></a>
+        <a href="/new_cowork"><button type="button" class="btn btn-danger">Add Listing</button></a>
         <% end %>
-
         <% if flash[:error] != nil %>
           <div class="alert alert-danger">
             <%= flash[:error] %>
@@ -31,7 +34,6 @@
           <% end %>
         </div>
       </div>    
-           <h3><u>Just because you work <i>for yourself</i> doesn't mean you have to work <i>by yourself</u></i></h3>
     </div>
   </div>
 <br>

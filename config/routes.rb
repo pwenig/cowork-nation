@@ -1,6 +1,6 @@
 App::Application.routes.draw do
 get "/"                   =>  "main#index"
-get "/listing/:id"        =>  "main#listing_details"
+get "/listing/:city"        =>  "main#listing_details"
 get "/login"              =>  "main#login"
 post "/login"             =>  "main#login_post"
 get "/new_user"           =>  "main#new_user"
@@ -14,7 +14,7 @@ get "/logout"             =>  "main#logout"
 
 
 
-
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

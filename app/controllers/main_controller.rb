@@ -133,7 +133,6 @@ def detail_details
 end 
 
 def logout
-	flash[:error] = "Goodbye"
   	session.clear
   	render :index and return
 end
