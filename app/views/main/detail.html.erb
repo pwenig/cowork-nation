@@ -9,7 +9,7 @@
         <div class="col-sm-3">
     	<td><p><%= @listing.long_desc %></p></td><br>
         </div>
-        <td><%= image_tag @listing.image %> height="100" width="175"</td>
+        <td><%= image_tag @listing.image, height:"200", width:"210" %></td>
         <% if @user != nil %>
         <a href="/new_or_edit/<%= @listing.name %>"><%= "(Edit Listing)" %></a><br>
         <% else %>
