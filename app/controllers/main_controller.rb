@@ -26,6 +26,18 @@ def listing_details
 	end
 end
 
+
+def search
+	city = params["city"] 
+	@listing = CoworkSite.where(city: city)
+	@header = "Coworking Sites in #{city}"
+	render :search and return
+end
+
+
+
+
+
 def login
 	render :login and return
 end

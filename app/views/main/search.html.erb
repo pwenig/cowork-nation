@@ -1,0 +1,22 @@
+
+<html>
+<div class="container">
+    <div class="row">
+    <h2><%= @header %></h2>
+       <% @listing.each do |listing| %>
+        <tr>
+    		<div class="col-sm-3">
+    			<td><h4><a href="/detail/<%= listing.name %>"><%= listing.name %></h4></a></td>
+    			<td><h4><%= listing.address %></h4></td>
+    			<td><h4><%= listing.city %>, <%= listing.state %>, <%= listing.zip %></h4></td>
+    		</div>
+    		<div class="col-sm-5">
+    			<td><b><%= listing.short_desc %></td></b><br>
+    		</div>
+    			<td><%= image_tag listing.image, height:"100", width:"175" %></td>
+    	   <br> 		
+        </tr>
+   	<% end %>
+    </div>
+</div>
+</html>
