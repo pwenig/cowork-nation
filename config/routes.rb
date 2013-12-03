@@ -1,7 +1,7 @@
 App::Application.routes.draw do
 get "/"                   =>  "main#index"
 get "/listing/:city"      =>  "main#listing_details"
-post "/search"             =>  "main#search"
+post "/search"            => "main#search"
 get "/login"              =>  "main#login"
 post "/login"             =>  "main#login_post"
 get "/new_user"           =>  "main#new_user"

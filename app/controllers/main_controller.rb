@@ -28,14 +28,20 @@ end
 
 
 def search
+	if session[:user_id] == nil
 	city = params["city"] 
 	@listing = CoworkSite.where(city: city)
 	@header = "Coworking Sites in #{city}"
 	render :search and return
+	else
+	user_id = session[:user_id]
+	@user = User.find(user_id)
+	city = params["city"] 
+	@listing = CoworkSite.where(city: city)
+	@header = "Coworking Sites in #{city}"
+	render :search and return
+	end
 end
-
-
-
 
 
 def login
@@ -127,7 +133,7 @@ def new_or_edit_details_post
 	@listing.phone 		= params["phone"]
 	@listing.email 		= params["email"]
 	@listing.save!
-	redirect_to "/listing" and return
+	redirect_to "/" and return
 end
 
 def detail_details

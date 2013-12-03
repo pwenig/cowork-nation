@@ -9,7 +9,7 @@
   <title>#1 Source for Coworking Locations</title>
 </head>
 <body>
-  <%= form_tag "/search" do %>
+  
 <div class="container">
     <div class="top-bar">
       <div class="row">
@@ -17,10 +17,12 @@
           <h3><u>Just because you work <i>for yourself</i> doesn't mean you have to work <i>by yourself</u></i></h3>
           <div class="top-bar-logo"><a href="/"><%= image_tag "newlogo.gif" %></a></div>
             <div class= "row">
+              <%= form_tag "/search" do %>
               <div class="col-md-12 col-md-offset-8">
             <%= text_field_tag "city", "City", size: 20 %>
             <%= submit_tag "Search" %></div>
             </div>
+            <% end %>
 
         <% if @user == nil %>
         <a href="/login"><button type="button" class="btn btn-success">Login</button></a>
@@ -47,7 +49,7 @@
    <a href="http://placeholder.com/"><h5>&copy; 2013 Sugar Mountain Software LLC</h5><h3>Connect with us!<br> Follow <a href="http://twitter.com/placehol">@Cowork</a> on Twitter</h3>  
      </div>
  </div>
-<% end %>
+
 </body>
 </html>
 

@@ -7,7 +7,7 @@ class CreateCoworkSites < ActiveRecord::Migration
     	t.string  :city
     	t.string  :state
     	t.integer :zip
-    	t.string  :short_desc
+    	t.text   :short_desc
     	t.text    :long_desc
     	t.string  :phone
     	t.string  :email
