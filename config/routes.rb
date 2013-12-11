@@ -1,4 +1,5 @@
 App::Application.routes.draw do
+
 get "/"                   =>  "main#index"
 get "/listing/:city"      =>  "main#listing_details"
 post "/search"            => "main#search"

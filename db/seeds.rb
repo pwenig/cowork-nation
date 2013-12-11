@@ -74,3 +74,26 @@ CoworkSite.create! \
 	phone: "970-682-4979",
 	email: "not@notlisted.com"
 	
+	CoworkSite.create! \
+	image: "citizen_space.gif",
+	name:	"Citizen Space",
+	address: "425 2nd St #100",
+	city:	"San Francisco",
+	state: "CA",
+	zip: 94107,
+	short_desc: "Citizen Space is a coworking space in San Francisco, and San Jose.",
+	long_desc: "We offer a large, open work space with dedicated desks as well as communal tables. Other perks include a kitchen, living room area, phone booth, and conference room. Our citizens include startups, software engineers, web developers, social media strategists, designers, writers, consultants and more. Some set-up shop here full-time; others just stop by to work for the day.",
+	phone: "415-501-9155",
+	email: "not@notlisted.com"
+
+	CoworkSite.create! \
+	image: "workspring.gif",
+	name:	"Workspring Central",
+	address: "30 West Monroe Floor 4",
+	city:	"Chicago",
+	state: "IL",
+	zip: 60606,
+	short_desc: "Workspring is a highly hosted offsite space for meetings, special events, and...",
+	long_desc: "Sessions are all inclusive with concierge services, high performance wifi, digital displays, work tools and supplies, energizing snacks and beverages, and more allowing you to focus on mission critical objectives.",
+	phone: "800-605-9092",
+	email: "info@workspring.com"
