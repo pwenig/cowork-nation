@@ -198,9 +198,6 @@ def logout
   	render :index and return
 end
 
-def form 
-	render :form and return
-end
 	
 def upload
 	upload 				= params[:file]

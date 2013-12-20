@@ -44,6 +44,36 @@
 	<td><%= label_tag "full_description" %></td>
 	<td><%= text_area_tag "long_desc", @listing.long_desc, rows: 6, cols: 70 %></td>
 	</tr>
+
+<table border='1'> 
+  <tr>
+    <th>ID</th> 
+    <th>Image</th> 
+    <th>Uploaded at</th>
+  </tr> 
+  <% for image in Image.order("id") %>
+    <tr> 
+	<td><%= image.id %></td> 
+	<td><img height="50" src="<%= image_data_path(image.id, image.extension) %>"></td> 
+    <td><%= image.created_at %></td>
+	</tr> 
+  <% end %>
+</table>
+
+<%= form_tag form_path, multipart: true, class: "dropzone", 
+	  id: "image-upload", style: "min-height:inherit; height:200px" do %>
+  <div class="fallback"> 
+    <%= file_field_tag :file, multipart: true %> 
+    <%= submit_tag "Upload" %>
+  </div> 
+ <% end %>
+
+<script> 
+  Dropzone.options.imageUpload={
+//forceFallback: true, // uncomment to test uploading without Dropzone dictFallbackMessage: "Chooseanimagetoupload...", success:function() {window.location.reload();}
+}; 
+</script>
+	
 	<tr>
 	<td>
 		<%= submit_tag "Submit", class: "button" %>
