@@ -11,7 +11,6 @@ def index
 	@user = User.find(user_id)
   	render :index and return
   end
-  	@event = Event.all
 end
 
 def listing_details
@@ -85,6 +84,23 @@ def new_user_post
 		render :login and return
 	end
 end
+
+def event
+	render :event and return
+end
+
+def event_post
+	@event = Event.new
+	@event.title = params["title"]
+	@event.event = params["event"]
+	@event.url = params["url"]
+	if @event.save == true
+		redirect_to "/" and return
+	else
+		render :event and return
+	end
+end
+
 
 def new_cowork
 	user_id = session[:user_id]
@@ -181,10 +197,6 @@ def image_data
 	image = Image.find(params[:id])
 	send_data image.data, type: image.content_type, disposition: "inline"
 end
-
-
-
-
 
 
 

@@ -1,0 +1,14 @@
+<%= form_tag "/event" do %>
+<div class = "container">
+
+<h1>Add New Event</h1>
+<%= label_tag "Event Title" %><br>
+<%= text_field_tag "title" %><br>
+<%= label_tag "Event Details" %><br>
+<%= text_area_tag "event" %><br>
+<%= label_tag "URL" %><br>
+<%= text_field_tag "url" %><br><br>
+<%= submit_tag "Submit New Event" %>
+</div>
+
+<% end %> 

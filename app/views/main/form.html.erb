@@ -8,7 +8,7 @@
   <% for image in Image.order("id") %>
     <tr> 
 	<td><%= image.id %></td> 
-	<td><img src="<%= image_data_path(image.id, image.extension) %>"></td> 
+	<td><img height="50" src="<%= image_data_path(image.id, image.extension) %>"></td> 
     <td><%= image.created_at %></td>
 	</tr> 
   <% end %>
