@@ -1,3 +1,15 @@
+NewsListing.create! \
+	headline: "Coworking space to hold open house",
+	story: "BOULDER - Spark Boulder, a new University of Colorado student-run co-working and incubator space on University Hill, is hosting an open house from 5:30 to 7 p.m. Thursday, Sept. 26.",
+	url: "http://www.bcbr.com/article/20130923/NEWS/130929982"
+
+NewsListing.create! \
+	headline: "Second Galvanize location coming",
+	story: "DENVER - One of the big announcements scheduled to come out of Denver Startup Week 2013 will be this: Galvanize, perhaps the premier startup co-working space in the city, is expanding to a second location. The new Galvanize campus will be located at 1644 Platte St., about three miles from its first building at 1062 Delaware St.",
+	url: "http://blogs.denverpost.com/techknowbytes/2013/09/17/denver-startup-week-second-galvanize-location-uber-rules-and-launch-of-lyft/11362/"
+
+
+
 Event.create! \
 	title: "The Studio Open House",
 	event: "The Studio Boulder will be having an open house on Jan 1, 2014. Come one come call",

@@ -1,0 +1,14 @@
+<%= form_tag "/news" do %>
+<div class = "container">
+
+<h1>Add News</h1>
+<%= label_tag "Headline" %><br>
+<%= text_field_tag "headline", "", size: 45 %><br>
+<%= label_tag "Story" %><br>
+<%= text_area_tag "story", "", rows: 3, cols: 50 %><br>
+<%= label_tag "URL" %><br>
+<%= text_field_tag "url", "", size: 45 %><br><br>
+<%= submit_tag "Submit News" %>
+</div>
+
+<% end %> 

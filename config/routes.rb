@@ -18,6 +18,8 @@ post "/form"              =>  "main#upload"
 get "/images/:id.:ext"    =>  "main#image_data"
 get "/event"              =>  "main#event"
 post "/event"             =>  "main#event_post"
+get "/news"               =>  "main#news"
+post "/news"              =>  "main#news_post"
 
 
 

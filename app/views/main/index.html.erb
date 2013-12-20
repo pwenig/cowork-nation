@@ -42,10 +42,10 @@
 		<div class="col-sm-4"
 			<ul>
       <h3>Coworking in the News</h3>
-      <a href="http://www.bcbr.com/article/20130923/NEWS/130929982" target="_blank"><b>Coworking space to hold open house</b></a>
-      <p>BOULDER - Spark Boulder, a new University of Colorado student-run co-working and incubator space on University Hill, is hosting an open house from 5:30 to 7 p.m. Thursday, Sept. 26.</p>
-       <a href="http://blogs.denverpost.com/techknowbytes/2013/09/17/denver-startup-week-second-galvanize-location-uber-rules-and-launch-of-lyft/11362/" target="_blank"><b>Second Galvanize location coming</b></a>
-       <p>DENVER - One of the big announcements scheduled to come out of Denver Startup Week 2013 will be this: Galvanize, perhaps the premier startup co-working space in the city, is expanding to a second location. The new Galvanize campus will be located at 1644 Platte St., about three miles from its first building at 1062 Delaware St.</p>
+      <% @news.each do |n| %>
+      <a href="<%= n.url %>" target="_blank"><b><%= n.headline %></b></a><br>
+      <%= n.story %><br><br>
+      <% end %>
       </ul>
       </div>
    <div class="col-sm-4">

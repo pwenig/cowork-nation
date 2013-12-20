@@ -4,6 +4,7 @@ class MainController < ApplicationController
 
 def index
 	@event = Event.all
+	@news = NewsListing.all
 	if session[:user_id] == nil
 	render :index and return
 	else
@@ -61,6 +62,7 @@ def login_post
 	elsif @user.authenticate(password) != false
 		session[:user_id] = @user.id
 		@event = Event.all
+		@news = NewsListing.all
 		render :index and return
 	else
 		flash[:error] = "Incorrect Password"
@@ -86,6 +88,8 @@ def new_user_post
 end
 
 def event
+	user_id = session[:user_id]
+	@user = User.find(user_id)
 	render :event and return
 end
 
@@ -101,6 +105,23 @@ def event_post
 	end
 end
 
+def news
+	user_id = session[:user_id]
+	@user = User.find(user_id)
+	render :news and return
+end
+
+def news_post
+	@news = NewsListing.new
+	@news.headline = params["headline"]
+	@news.story = params["story"]
+	@news.url = params["url"]
+	if @news.save == true
+		redirect_to "/" and return
+	else
+		render :news and return
+	end
+end
 
 def new_cowork
 	user_id = session[:user_id]
@@ -173,6 +194,7 @@ end
 def logout
   	session.clear
   	@event = Event.all
+  	@news = NewsListing.all
   	render :index and return
 end
 
