@@ -1,4 +1,12 @@
+Event.create! \
+	title: "The Studio Open House",
+	event: "The Studio Boulder will be having an open house on Jan 1, 2014. Come one come call",
+	url: "http://www.davinciinstitute.com/"  
 
+Event.create! \
+	title: "DaVinic Inst Holiday Party",
+	event: "Happy Holidays! Come have some fun with us",
+	url: "http://thestudioboulder.com/"  
 
 
 CoworkSite.create! \

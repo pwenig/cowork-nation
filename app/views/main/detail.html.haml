@@ -1,0 +1,16 @@
+.container
+ .row
+  .col-sm-3
+   %p= @listing.name
+   %p= @listing.address
+   %p #{@listing.city}, #{@listing.state}, #{@listing.zip}
+  .col-sm-3
+   %p= @listing.long_desc
+  .col-sm-3
+   = image_tag @listing.image, width: 210, height: 200
+   - if @user != nil
+    %a(href="/new_or_edit/#{@listing.name}") Edit Listing
+   - else
+   
+
+			

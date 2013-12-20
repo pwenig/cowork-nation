@@ -3,6 +3,7 @@ class MainController < ApplicationController
 
 
 def index
+	@event = Event.all
 	if session[:user_id] == nil
 	render :index and return
 	else
@@ -10,6 +11,7 @@ def index
 	@user = User.find(user_id)
   	render :index and return
   end
+  	@event = Event.all
 end
 
 def listing_details
@@ -59,6 +61,7 @@ def login_post
 		redirect_to "/login" and return
 	elsif @user.authenticate(password) != false
 		session[:user_id] = @user.id
+		@event = Event.all
 		render :index and return
 	else
 		flash[:error] = "Incorrect Password"
@@ -67,7 +70,6 @@ def login_post
 end
 
 def new_user 
-	@user = User.new
 	render :new_user and return
 end
 
@@ -154,8 +156,38 @@ end
 
 def logout
   	session.clear
+  	@event = Event.all
   	render :index and return
 end
 
+def form 
+	render :form and return
+end
 	
+def upload
+	upload 				= params[:file]
+	image 				= Image.new
+	image.data 			= upload.read
+	image.content_type 	= upload.content_type
+	image.extension		= upload.original_filename.downcase.split(".").last
+	image.save!
+	respond_to do |format|
+		format.html { redirect_to form_path and return }
+		format.json { render :json => image.id and return }
+	end
+end
+
+def image_data
+	image = Image.find(params[:id])
+	send_data image.data, type: image.content_type, disposition: "inline"
+end
+
+
+
+
+
+
+
+
+
 end

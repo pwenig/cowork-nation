@@ -42,20 +42,24 @@
 		<div class="col-sm-4"
 			<ul>
       <h3>Coworking in the News</h3>
-      <a href src ="http://www.bcbr.com/article/20130923/NEWS/130929982"><b>Coworking space to hold open house</b></a>
+      <a href="http://www.bcbr.com/article/20130923/NEWS/130929982" target="_blank"><b>Coworking space to hold open house</b></a>
       <p>BOULDER - Spark Boulder, a new University of Colorado student-run co-working and incubator space on University Hill, is hosting an open house from 5:30 to 7 p.m. Thursday, Sept. 26.</p>
-       <href src="http://blogs.denverpost.com/techknowbytes/2013/09/17/denver-startup-week-second-galvanize-location-uber-rules-and-launch-of-lyft/11362/"><a><b>Second Galvanize location coming</b></a>
+       <a href="http://blogs.denverpost.com/techknowbytes/2013/09/17/denver-startup-week-second-galvanize-location-uber-rules-and-launch-of-lyft/11362/" target="_blank"><b>Second Galvanize location coming</b></a>
        <p>DENVER - One of the big announcements scheduled to come out of Denver Startup Week 2013 will be this: Galvanize, perhaps the premier startup co-working space in the city, is expanding to a second location. The new Galvanize campus will be located at 1644 Platte St., about three miles from its first building at 1062 Delaware St.</p>
       </ul>
       </div>
    <div class="col-sm-4">
    <h3>Cowork Events</h3> 
-      <p>Some good events will be listed here soon</p> 
+   <% @event.each do |e| %>
+   <b><%= e.title %></b><br>
+   <%= e.event %><br>
+   <a href="<%= e.url %>" target="_blank"><b><%= e.url %></b></a><br><br>
+   <% end %>
      </div>
     <div class="col-sm-4">
      <h3>Featured Cowork Space</h3>
      <p><iframe src="//player.vimeo.com/video/77724561?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff&amp;loop=0" width="250" height="234" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
-          <a href src ="http://thestudioboulder.com/"><b>THE STUDIO BOULDER</b></a><br><br>
+          <a href="http://thestudioboulder.com/" target="_blank"><b>THE STUDIO BOULDER</b></a><br><br>
           <p>The Studio Boulder is a collection of private workshops and offices contained within a greater collaborative, shared space. Behind the closed doors of our member’s spaces is where the work is done, but the public space has been designed to encourage creative collaboration. The Studio’s lounge, community kitchen, conference rooms – one of which will be inside a renovated vintage airstream trailer, and mezzanine host inspired discussions and foster potential collaboration and sharing of ideas.  At any time of day members might choose to seclude themselves, open up the workspace to the rest of the community, or mingle with other members in the common areas.</p>
      
   	</div>

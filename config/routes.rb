@@ -2,7 +2,7 @@ App::Application.routes.draw do
 
 get "/"                   =>  "main#index"
 get "/listing/:city"      =>  "main#listing_details"
-post "/search"            => "main#search"
+post "/search"            =>  "main#search"
 get "/login"              =>  "main#login"
 post "/login"             =>  "main#login_post"
 get "/new_user"           =>  "main#new_user"
@@ -13,6 +13,11 @@ get "/new_or_edit/:name"  =>  "main#new_or_edit_details"
 post "/new_or_edit/:name" =>  "main#new_or_edit_details_post"
 get "/detail/:name"       =>  "main#detail_details"
 get "/logout"             =>  "main#logout"
+get "/form"               =>  "main#form"
+post "/form"              =>  "main#upload"
+get "/images/:id.:ext"    =>  "main#image_data"
+get "/event"              =>  "main#event"
+post "/event"             =>  "main#event_post"
 
 
 
