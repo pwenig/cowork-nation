@@ -3,8 +3,8 @@ class MainController < ApplicationController
 
 
 def index
-	@event = Event.all
-	@news = NewsListing.all
+	@event = Event.all.reverse
+	@news = NewsListing.all.reverse
 	if session[:user_id] == nil
 	render :index and return
 	else
@@ -193,8 +193,8 @@ end
 
 def logout
   	session.clear
-  	@event = Event.all
-  	@news = NewsListing.all
+  	@event = Event.all.reverse
+  	@news = NewsListing.all.reverse
   	render :index and return
 end
 
